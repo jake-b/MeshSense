@@ -1,4 +1,18 @@
-##22Nov24
+# 17 Dec 2024: Jake's changes
+
+Wanted to run this on an arm64 (Raspberry Pi) in a docker container, for connecting to TCP-only hosts.
+- Needed to remove bluetooth support, as discussed here: https://github.com/Affirmatech/MeshSense/issues/22
+- Added ENV variable for the access key.
+- Connect with http://{YOUR IP}:5920
+	- Make sure you configure the access key in the client first (config button upper right)
+	- Once configured with your access key, you'll get the full interface.
+	- This allows you to select TLS, which you might need depending on your use case.
+	- Connect to your WiFi-enabled node using the connect box upper left.
+- I dont use docker-compose, so I simplified the build/run scripts for my purposes.  YMMV
+
+# Original Readme Below
+
+## 22Nov24
 The container is now running with the following improvements:
 
 Added proper DBus system configuration for Bluetooth support
